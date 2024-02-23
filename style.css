@@ -25,12 +25,15 @@ h3 { /* Formatar TODOS os elementos de <h3> */
 }
 .kambo {
     color: chartreuse;
+    text-align: center;
 }
 .rape {
     color: maroon;
+    text-align: center;
 }
 .ayahuasca {
-    color: rgb(132, 0, 255);
+    color: rgb(64, 0, 124);
+    text-align: center;
 }
 main {
     display: flex; /* Essa propriedade serve para tornar os elementos "filhos" flexíveis dentro do elemento "pai", ou seja, nesse caso o elemento pai é o <main> e os fihos são os <div>... Com essa propriedade os div serão realocados de forma flexível dentro do main */
@@ -40,15 +43,16 @@ main {
 /* Aqui encontro as propriedades do flexbox https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 .cabecalho {
     text-align: center; /* Serve para colocar os elementos centralizados no meio */
-    display: flex;
     justify-content: center;
 }
-footer {
+.footer {
     display: flex;
     justify-content: center;
     text-align: center;
 }
-
-.kra {
+.tipos-medicinas{
+    text-align: center;
+}
+.descricao-medicinas {
     display: flex;
 }
