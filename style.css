@@ -1,0 +1,54 @@
+body { /* Marcações serão restritas ao body */
+    height: 100vh;
+    box-sizing: border-box; /*Serve para não permitir que os elementos "filhos" saiam do pai... Ou seja, tudo que estiver dentro do box vai ser reduzido para caber dentro do body */
+    background-color: rgb(55, 121, 80); /* Cor de fundo da página,  site do adobe para ajudar a escolher cores harmoniosas https://color.adobe.com/pt/create/color-wheel*/
+    color: rgb(0, 0, 0); /* cor da fonte */    
+}
+.titulo { /* personalizei APENAS valores com class="titulo" */
+    color: rgb(10, 214, 61);
+}
+strong { /* Formatar TODOS os elementos marcados com <strong> */
+    color: blue;
+}
+h1 { /* Formatar TODOS os elementos de <h1> */
+    color: rgb(163, 231, 154);
+}
+p { /* Formatar TODOS os elementos de <p> */
+    color: rgb(247, 201, 146);
+}
+h3 { /* Formatar TODOS os elementos de <h3> */
+    color: rgb(71, 1, 1);
+}
+.texto-destaque {
+    color: rgb(247, 201, 146);
+    text-align: center;
+}
+.kambo {
+    color: chartreuse;
+}
+.rape {
+    color: maroon;
+}
+.ayahuasca {
+    color: rgb(132, 0, 255);
+}
+main {
+    display: flex; /* Essa propriedade serve para tornar os elementos "filhos" flexíveis dentro do elemento "pai", ou seja, nesse caso o elemento pai é o <main> e os fihos são os <div>... Com essa propriedade os div serão realocados de forma flexível dentro do main */
+    flex-direction: column;
+    justify-content: center;
+}
+/* Aqui encontro as propriedades do flexbox https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+.cabecalho {
+    text-align: center; /* Serve para colocar os elementos centralizados no meio */
+    display: flex;
+    justify-content: center;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.kra {
+    display: flex;
+}
