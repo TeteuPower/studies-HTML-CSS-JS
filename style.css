@@ -36,7 +36,7 @@ h3 { /* Formatar TODOS os elementos de <h3> */
 }
 
 
-/************************main*********************************/
+/************************main**********************************/
 
 main {
     display: flex; /* Essa propriedade serve para tornar os elementos "filhos" flexíveis dentro do elemento "pai", ou seja, nesse caso o elemento pai é o <main> e os fihos são os <div>... Com essa propriedade os div serão realocados de forma flexível dentro do main */
