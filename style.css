@@ -55,4 +55,5 @@ main {
 }
 .descricao-medicinas {
     display: flex;
+    justify-content: space-between; /* Criar espaço entre os elementos */
 }
