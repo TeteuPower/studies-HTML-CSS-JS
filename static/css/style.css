@@ -1,5 +1,6 @@
 /* Aqui encontro as propriedades do flexbox https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap'); /* Link da fonte que eu importei do google fontes... Para linkar-la em uma classe deve copiar o código que o próprio google fontes fornece, nesse caso é o font-family: "Amatic SC", sans-serif; */
+/* https://fonts.google.com/ */
 body { /* Marcações serão restritas ao body */
     height: 100vh;
     box-sizing: border-box; /*Serve para não permitir que os elementos "filhos" saiam do pai... Ou seja, tudo que estiver dentro do box vai ser reduzido para caber dentro do body */
@@ -23,20 +24,20 @@ h3 { /* Formatar TODOS os elementos de <h3> */
 
 .cabecalho {
     text-align: center; /* Serve para colocar os elementos centralizados no meio */
-    justify-content:space-around;
-    margin-block: 15px;
+    margin-block: 15px; /* Criar uma margem ao redor do bloco */
+    flex-direction: column; /* Organizar os blocos em colunas */
 }
 .cabecalho__titulo {
     margin-block: 10px;
-    font-size: 80px;
-    font-family: "Amatic SC", sans-serif;
+    font-size: 80px; /* Tamanho da fonte */
+    font-family: "Amatic SC", sans-serif; /* Inserindo a fonte que já foi linkada no começo do arquivo */
 }
 .cabecalho__titulo2 {
     margin-block: 10px;
     font-size: 30px;
     
 }
-.cabecalho__titulo_strong { /* personalizei APENAS valores com class="titulo" */
+.cabecalho__titulo_strong {
     color: rgb(10, 214, 61);
 }
 
@@ -46,22 +47,21 @@ h3 { /* Formatar TODOS os elementos de <h3> */
 main {
     display: flex; /* Essa propriedade serve para tornar os elementos "filhos" flexíveis dentro do elemento "pai", ou seja, nesse caso o elemento pai é o <main> e os fihos são os <div>... Com essa propriedade os div serão realocados de forma flexível dentro do main */
     flex-direction: column;
-    justify-content: center;
     font-family: "Amatic SC", sans-serif;
+    font-size: 30px;
 }
 .tipos_medicinas {
+    flex-direction: column;
     text-align: center;
 }
 .tipos_medicinas__textodestaque {
     color: rgb(247, 201, 146);
-    text-align: center;
     margin-bottom: 5px;
-    font-size: 20px;
+    
 }
 .tipos_medicinas__lista {
-    font-size: 20px;
     margin: 10px;
-    font-weight: bolder;
+    font-weight: bolder; /* Deixar o texto em negrito */
 }
 .descricao-medicinas {
     display: flex;
@@ -75,6 +75,8 @@ main {
 .kambo__desc {
     margin: 5px;
     margin-left: 20px;
+    background-color: chartreuse;
+    border-radius: 16px; /* Arredondar as bordas */
 }
 .rape {
     color: maroon;
@@ -83,6 +85,8 @@ main {
 }
 .rape__desc {
     margin: 5px;
+    background-color: brown;
+    border-radius: 16px;
 }
 .ayahuasca {
     color: rgb(64, 0, 124);
@@ -92,11 +96,25 @@ main {
 .ayahuasca__desc {
     margin-right: 20px;
     margin-left: 5px;
+    background-color: blueviolet;
+    border-radius: 16px;
 }
 /************************footer*********************************/
-.footer {
+
+footer {
     display: flex;
-    justify-content: center;
+    justify-content:center
+}
+.footer__gif {
+    margin: 20px;
+}
+.footer__contatos {
+    display: flex;
     text-align: center;
-    margin-block: 20px;
+    margin: 20px;
+    flex-direction: column;
+    font-size: 18px;
+}
+.footer__gif2 {
+    margin: 20px;
 }
