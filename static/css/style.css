@@ -1,4 +1,5 @@
 /* Aqui encontro as propriedades do flexbox https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap'); /* Link da fonte que eu importei do google fontes... Para linkar-la em uma classe deve copiar o código que o próprio google fontes fornece, nesse caso é o font-family: "Amatic SC", sans-serif; */
 body { /* Marcações serão restritas ao body */
     height: 100vh;
     box-sizing: border-box; /*Serve para não permitir que os elementos "filhos" saiam do pai... Ou seja, tudo que estiver dentro do box vai ser reduzido para caber dentro do body */
@@ -27,9 +28,13 @@ h3 { /* Formatar TODOS os elementos de <h3> */
 }
 .cabecalho__titulo {
     margin-block: 10px;
+    font-size: 80px;
+    font-family: "Amatic SC", sans-serif;
 }
 .cabecalho__titulo2 {
     margin-block: 10px;
+    font-size: 30px;
+    
 }
 .cabecalho__titulo_strong { /* personalizei APENAS valores com class="titulo" */
     color: rgb(10, 214, 61);
@@ -42,29 +47,51 @@ main {
     display: flex; /* Essa propriedade serve para tornar os elementos "filhos" flexíveis dentro do elemento "pai", ou seja, nesse caso o elemento pai é o <main> e os fihos são os <div>... Com essa propriedade os div serão realocados de forma flexível dentro do main */
     flex-direction: column;
     justify-content: center;
+    font-family: "Amatic SC", sans-serif;
 }
-.texto-destaque {
+.tipos_medicinas {
+    text-align: center;
+}
+.tipos_medicinas__textodestaque {
     color: rgb(247, 201, 146);
     text-align: center;
+    margin-bottom: 5px;
+    font-size: 20px;
 }
-.kambo {
-    color: chartreuse;
-    text-align: center;
-}
-.rape {
-    color: maroon;
-    text-align: center;
-}
-.ayahuasca {
-    color: rgb(64, 0, 124);
-    text-align: center;
-}
-.tipos-medicinas{
-    text-align: center;
+.tipos_medicinas__lista {
+    font-size: 20px;
+    margin: 10px;
+    font-weight: bolder;
 }
 .descricao-medicinas {
     display: flex;
     justify-content: space-between; /* Criar espaço entre os elementos */
+}
+.kambo {
+    color: chartreuse;
+    text-align: center;
+    font-weight: bold;
+}
+.kambo__desc {
+    margin: 5px;
+    margin-left: 20px;
+}
+.rape {
+    color: maroon;
+    text-align: center;
+    font-weight: bold;
+}
+.rape__desc {
+    margin: 5px;
+}
+.ayahuasca {
+    color: rgb(64, 0, 124);
+    text-align: center;
+    font-weight: bolder;
+}
+.ayahuasca__desc {
+    margin-right: 20px;
+    margin-left: 5px;
 }
 /************************footer*********************************/
 .footer {
