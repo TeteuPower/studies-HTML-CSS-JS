@@ -1,9 +1,14 @@
 /* Aqui encontro as propriedades do flexbox https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+/* Aqui encontro fontes para formatar a página https://fonts.google.com/ */
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap'); /* Link da fonte que eu importei do google fontes... Para linkar-la em uma classe deve copiar o código que o próprio google fontes fornece, nesse caso é o font-family: "Amatic SC", sans-serif; */
-/* https://fonts.google.com/ */
+
+/************************body*********************************/
+
 body { /* Marcações serão restritas ao body */
-    height: 100vh;
     box-sizing: border-box; /*Serve para não permitir que os elementos "filhos" saiam do pai... Ou seja, tudo que estiver dentro do box vai ser reduzido para caber dentro do body */
+    display: flex; /* Essa propriedade serve para tornar os elementos "filhos" flexíveis dentro do elemento "pai", ou seja, nesse caso o elemento pai é o <main> e os fihos são os <div>... Com essa propriedade os div serão realocados de forma flexível dentro do main */
+    flex-direction: column;/* Organizar os blocos em colunas */
+    text-align: center;/* Serve para colocar os elementos centralizados no meio */
     background-color: rgb(55, 121, 80); /* Cor de fundo da página,  site do adobe para ajudar a escolher cores harmoniosas https://color.adobe.com/pt/create/color-wheel*/
     color: rgb(0, 0, 0); /* cor da fonte */    
 }
@@ -20,12 +25,11 @@ h3 { /* Formatar TODOS os elementos de <h3> */
     color: rgb(71, 1, 1);
 }
 
+/**************************body*********************************/
 /************************header*********************************/
 
 .cabecalho {
-    text-align: center; /* Serve para colocar os elementos centralizados no meio */
     margin-block: 15px; /* Criar uma margem ao redor do bloco */
-    flex-direction: column; /* Organizar os blocos em colunas */
 }
 .cabecalho__titulo {
     margin-block: 10px;
@@ -35,86 +39,84 @@ h3 { /* Formatar TODOS os elementos de <h3> */
 .cabecalho__titulo2 {
     margin-block: 10px;
     font-size: 30px;
-    
 }
-.cabecalho__titulo_strong {
+.cabecalho__titulo__strong {
     color: rgb(10, 214, 61);
 }
 
-
+/************************header*********************************/
 /************************main**********************************/
 
 main {
-    display: flex; /* Essa propriedade serve para tornar os elementos "filhos" flexíveis dentro do elemento "pai", ou seja, nesse caso o elemento pai é o <main> e os fihos são os <div>... Com essa propriedade os div serão realocados de forma flexível dentro do main */
-    flex-direction: column;
-    font-family: "Amatic SC", sans-serif;
+    font-family: "Amatic SC", sans-serif; /* Seleciona a fonte de todo o main */
     font-size: 30px;
-}
-.tipos_medicinas {
-    flex-direction: column;
-    text-align: center;
 }
 .tipos_medicinas__textodestaque {
     color: rgb(247, 201, 146);
-    margin-bottom: 5px;
-    
+    margin-bottom: 5px; /* Cria uma margem em baixo do elemento */
 }
 .tipos_medicinas__lista {
     margin: 10px;
     font-weight: bolder; /* Deixar o texto em negrito */
 }
-.descricao-medicinas {
+.descricao_medicinas {
     display: flex;
-    justify-content: space-between; /* Criar espaço entre os elementos */
+    margin: 20px;
+    font-size: 20px;
+    justify-content: center; /* Centralizar os blocos todos no centro do site */
 }
-.kambo {
+.descricao_medicinas__kambo__titulo {
     color: chartreuse;
     text-align: center;
     font-weight: bold;
 }
-.kambo__desc {
+.descricao_medicinas__kambo__desc {
     margin: 5px;
-    margin-left: 20px;
     background-color: chartreuse;
     border-radius: 16px; /* Arredondar as bordas */
+    padding-left: 13px; /* cria uma margem de padding, dentro da sessão */
+    padding-right: 13px;
 }
-.rape {
+.descricao_medicinas__rape__titulo {
     color: maroon;
     text-align: center;
     font-weight: bold;
 }
-.rape__desc {
+.descricao_medicinas__rape__desc {
     margin: 5px;
     background-color: brown;
     border-radius: 16px;
+    padding-left: 13px;
+    padding-right: 13px;
 }
-.ayahuasca {
+.descricao_medicinas__ayahuasca__titulo {
     color: rgb(64, 0, 124);
     text-align: center;
     font-weight: bolder;
 }
-.ayahuasca__desc {
-    margin-right: 20px;
-    margin-left: 5px;
+.descricao_medicinas__ayahuasca__desc {
+    margin: 5px;
     background-color: blueviolet;
     border-radius: 16px;
+    padding-left: 13px;
+    padding-right: 13px;
 }
+
+/*************************main**********************************/
 /************************footer*********************************/
 
 footer {
     display: flex;
-    justify-content:center
+    font-size: 15px;
+    justify-content:center;
+    align-items: center; /* Alinhar os elementos dentro da caixa, tanto na vertical quanto na horizontal */
 }
 .footer__gif {
-    margin: 20px;
+    margin: 5px;
 }
 .footer__contatos {
-    display: flex;
     text-align: center;
     margin: 20px;
-    flex-direction: column;
-    font-size: 18px;
 }
-.footer__gif2 {
-    margin: 20px;
-}
+
+/************************footer*********************************/
