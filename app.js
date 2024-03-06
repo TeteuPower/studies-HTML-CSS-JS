@@ -17,35 +17,37 @@ if (chute==nindigena)// O if serve para criar uma condição; os dois sinais de 
         alert(`Boa ${nome}, você sabe o número indígena, ${nindigena}!! Seja bem-vindo ao nosso site!`);//Nesse caso eu adicionei uma variável dentro do texto, para tanto ao invés de usar aspas simples se fez necessário usar a CRASE, e antes da variável usa-se o ${} com o nome da variável para ser lida dentro das chaves
     }
 
-//while numa tradução direta é "enquanto", é um comando para criar o looping, ou seja, ENQUANTO a condição não for atendida ele vai ficar travado na leitura
+//while numa tradução direta é "enquanto", é um comando para criar o looping, ou seja, ENQUANTO a condição estiver sendo atendida ele vai ficar travado na leitura
 // != é o sinal de diferente
+// comando BREAK, usado dentro do while breca o looping, quando ele é lido pelo navegador, ele segue a leitura fora do while
 while (chute!=nindigena)
 {
-    if (chute == nindigena)
+    // Criei a variável 'palavratentativa'; tentativas é maior do que 1? se sim o valor de 'palavratentativa' é 'tentativas'; se não o valor é 'tentativa' no singular
+    let palavratentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
+    if (tentativas==1)
     {
-        alert(`Boa ${nome}, você sabe o número indígena, ${nindigena}!! Seja bem-vindo ao nosso site!`);
-    }
-    else //caso o chute não seja igual ao número indígena, executa o comando else
-    {
-        alert(`Poxa vida ${nome}, você errou!`);
+        alert(`Poxa vida ${nome}, você errou! Essa foi a sua primeira ${palavratentativa}, tente novamente!`);
         tentativas++; // Quando for feita a leitura desse parâmetro será somado +1 na memória da variável "tentativas"
-      //tentativas = tentativas +1; também poderia ser escrito dessa maneira
-        console.log('número de tentativas',tentativas);
-            if (chute>nindigena)
-            {
-                chute=prompt(`${nome}, o número índigena é MENOR do que ${chute}, tente novamente`);
-                    console.log('valor do chute',chute);// Conferir se foi computado corretamente o valor do chute
-                    console.log('resultado da comparação', chute==nindigena);// Conferir se o valor "chute" foi igual ao "nindigena"
-            } else 
-            {
-                chute=prompt(`${nome}, o número índigena é MAIOR do que ${chute}, tente novamente`);
-                    console.log('valor do chute',chute);// Conferir se foi computado corretamente o valor do chute
-                    console.log('resultado da comparação', chute==nindigena);// Conferir se o valor "chute" foi igual ao "nindigena"
-            }
-            if (chute==nindigena)
-            {
-                alert(`Boa ${nome}, com ${tentativas} tentativas você descobriu o número indígena, ${nindigena}!! Seja bem-vindo ao nosso site!`);
-            }
-                
+        //tentativas = tentativas +1; também poderia ser escrito dessa maneira
+    } else
+    {
+    alert(`Poxa vida ${nome}, você errou! Já são ${tentativas} ${palavratentativa}, tente novamente!`);
+    tentativas++;
     }
+        console.log('número de tentativas',tentativas);
+        if (chute>nindigena)
+        {
+            chute=prompt(`${nome}, o número índigena é MENOR do que ${chute}.`);
+                console.log('valor do chute',chute);// Conferir se foi computado corretamente o valor do chute
+                console.log('resultado da comparação', chute==nindigena);// Conferir se o valor "chute" foi igual ao "nindigena"
+        } else 
+        {
+            chute=prompt(`${nome}, o número índigena é MAIOR do que ${chute}.`);
+                console.log('valor do chute',chute);// Conferir se foi computado corretamente o valor do chute
+                console.log('resultado da comparação', chute==nindigena);// Conferir se o valor "chute" foi igual ao "nindigena"
+        }
+        if (chute==nindigena)
+        {
+            alert(`Boa ${nome}, com ${tentativas} ${palavratentativa} você descobriu o número indígena, ${nindigena}!! Seja bem-vindo ao nosso site!`);
+        }        
 }
