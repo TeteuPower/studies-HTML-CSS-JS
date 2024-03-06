@@ -23,7 +23,7 @@ if (chute==nindigena)// O if serve para criar uma condição; os dois sinais de 
 while (chute!=nindigena)
 {
     // Criei a variável 'palavratentativa'; tentativas é maior do que 1? se sim o valor de 'palavratentativa' é 'tentativas'; se não o valor é 'tentativa' no singular
-    let palavratentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
+    let palavratentativa = tentativas > 1 ? 'tentativas' : 'tentativa'; //Isso chama "Operador ternário"
     if (tentativas==1)
     {
         alert(`Poxa vida ${nome}, você errou! Essa foi a sua primeira ${palavratentativa}, tente novamente!`);
@@ -35,19 +35,19 @@ while (chute!=nindigena)
     tentativas++;
     }
         console.log('número de tentativas',tentativas);
-        if (chute>nindigena)
-        {
-            chute=prompt(`${nome}, o número índigena é MENOR do que ${chute}.`);
-                console.log('valor do chute',chute);// Conferir se foi computado corretamente o valor do chute
-                console.log('resultado da comparação', chute==nindigena);// Conferir se o valor "chute" foi igual ao "nindigena"
-        } else 
-        {
-            chute=prompt(`${nome}, o número índigena é MAIOR do que ${chute}.`);
-                console.log('valor do chute',chute);// Conferir se foi computado corretamente o valor do chute
-                console.log('resultado da comparação', chute==nindigena);// Conferir se o valor "chute" foi igual ao "nindigena"
-        }
-        if (chute==nindigena)
-        {
-            alert(`Boa ${nome}, com ${tentativas} ${palavratentativa} você descobriu o número indígena, ${nindigena}!! Seja bem-vindo ao nosso site!`);
-        }        
+    if (chute>nindigena)
+    {
+        chute=prompt(`${nome}, o número índigena é MENOR do que ${chute}.`);
+            console.log('valor do chute',chute);// Conferir se foi computado corretamente o valor do chute
+            console.log('resultado da comparação', chute==nindigena);// Conferir se o valor "chute" foi igual ao "nindigena"
+    } else 
+    {
+        chute=prompt(`${nome}, o número índigena é MAIOR do que ${chute}.`);
+            console.log('valor do chute',chute);// Conferir se foi computado corretamente o valor do chute
+            console.log('resultado da comparação', chute==nindigena);// Conferir se o valor "chute" foi igual ao "nindigena"
+    }
+    if (chute==nindigena)
+    {
+        alert(`Boa ${nome}, com ${tentativas} ${palavratentativa} você descobriu o número indígena, ${nindigena}!! Seja bem-vindo ao nosso site!`);
+    }        
 }
