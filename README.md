@@ -1,2 +1,2 @@
-# studies
-I'm trying to add, remove, push and pull files on git using prompt... And this repository is my table-work
+# Estudos
+Esse é o meu primeiro projeto, com ele vou colocar em prática meus estudos no curso da Alura de HTML5, CSS e JavaScript e Git/GitHub

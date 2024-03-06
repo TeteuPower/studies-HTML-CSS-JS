@@ -1,14 +1,17 @@
 // Quando o projeto ficar disponível para todas as pessoas, os comandos console.log devem ser removidos ou desabilitados, pois podem causar problemas de desempenho e segurança.
+// https://www.w3schools.com/js/default.asp site para aprofundar o conhecimento em javascript
 let nome=prompt('Olá mundo! Qual o seu nome?'); // Let cria uma variável que vai ser armazenada na memória, nesse caso chamada 'nome', o prompt cria uma janela com espaço para o usuário digitar informação, o "=" informa que o conteúdo inserido pelo usuário vai ser armazenado na variável 'nome'; o ('') serve para a inserção de uma mensagem na janela prompt
     console.log('Nome do usuário',nome);//Comando console.log serve para imprimir mensagens ou valores no console do navegador, q não é visível ao usuário, nesse caso está sendo usado para conferir o nome do usuário
 
-let nindigena = parseInt(Math.random() * 100 + 1) // O comando parseInt serve para ser selecionado apenas a parte inteira do número, descartando tudo depois da vírgula; Math.random() cria um número aleatório entre [0,1[; * é sinal de multiplicação, ou seja, o número do Math.random vezes 10 e somado mais 1... A soma dessas ordens será o valor da variável nindigena. Que é um número entre [1 e 100]
+let numeromaximo = 100;
+let nindigena = parseInt(Math.random() * numeromaximo + 1); // O comando parseInt serve para ser selecionado apenas a parte inteira do número, descartando tudo depois da vírgula; Math.random() cria um número aleatório entre [0,1[; * é sinal de multiplicação, ou seja, o número do Math.random vezes 10 e somado mais 1... A soma dessas ordens será o valor da variável nindigena. Que é um número entre [1 e 100]
     console.log('número indígena',nindigena); // Conferir qual é o número índigena
+//parseInt também serve para transformar variáveis em números que as funções podem ler
 
 let tentativas = 1;
     console.log('número de tentativas',tentativas);
 
-let chute=prompt (`${nome}, qual é o número indígena? Ele está entre 1 e 100`); // Criar a variável chute que será preenchida pelo usuário
+let chute=prompt (`${nome}, qual é o número indígena? Ele está entre 1 e ${numeromaximo}`); // Criar a variável chute que será preenchida pelo usuário
     console.log('valor do chute',chute); // Conferir se foi computado corretamente o valor do chute
     console.log('resultado da comparação', chute==nindigena); // Conferir se o valor "chute" foi igual ao "nindigena"
 
